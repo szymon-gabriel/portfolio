@@ -10,35 +10,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="main-header">
         <div class="logo">Szymon Wojciechowski<span>.</span></div>
+        
         <nav class="nav-links">
             <a href="#hero" class="active">Home</a>
-            <a href="#realizacje">Projects</a>
+            <a href="#about">About</a>
             <a href="#skills">Skills</a>
-            <a href="#kontakt">Contact</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
+
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="pl">PL</button>
+            <span class="lang-divider">/</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
     </header>
 
     <section id="hero" class="hero-section">
         <div class="hero-hybrid-grid">
             
             <div class="hero-left-block">
-                <h1 class="hybrid-title">Full-stack</h1>
-                <p class="hero-bio-text">
+                <h1 class="hybrid-title">Creative</h1>
+                <p class="hero-bio-text" data-i18n="hero_bio">
                     <span class="purple-glow-text">Tech DNA & Analytical Mindset.</span> Zorientowany na detale deweloper z analitycznym podejściem do rozwiązywania problemów. Projektuję i koduję wydajne aplikacje webowe oraz rozszerzenia automatyzujące procesy biznesowe.
                 </p>
             </div>
 
             <div class="hero-right-block">
                 <div class="projects-action-holder">
-                    <a href="#realizacje" class="hybrid-projects-btn">
-                        <span>Explore Projects</span>
+                    <a href="#projects" class="hybrid-projects-btn">
+                        <span data-i18n="hero_btn">Zobacz Projekty</span>
                         <div class="btn-arrow-icon">
                             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.33334 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -49,6 +56,17 @@
                 <h1 class="hybrid-title title-offset">Developer<span>.</span></h1>
             </div>
 
+        </div>
+
+        <div class="hero-cv-wrapper">
+            <a href="assets/cv/Szymon-Wojciechowski-CV.pdf" class="hero-cv-download-btn" download="Szymon-Wojciechowski-CV.pdf">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span data-i18n="hero_cv">Pobierz CV</span>
+            </a>
         </div>
 
         <div class="social-pills-row">
@@ -64,6 +82,502 @@
         </div>
         
     </section>
+
+    <section id="about" class="about-section">
+        <div class="section-container about-grid">
+            
+            <div class="about-image-block">
+                <div class="image-glow-back"></div>
+                <div class="image-wrapper">
+                    <img src="assets/images/about-main.jpg" alt="Szymon Wojciechowski">
+                </div>
+            </div>
+
+            <div class="about-text-block">
+                <h2 class="section-title"><span data-i18n="about_title_1">O mnie</span><span>.</span></h2>
+                <h3 class="about-subtitle" data-i18n="about_subtitle">Pasja poparta realnymi wdrożeniami</h3>
+                
+                <p class="about-paragraph" data-i18n="about_p1">
+                    Moja przygoda z programowaniem zaczęła się od czystej ciekawości, która szybko przerodziła się w pasję tworzenia narzędzi rozwiązujących realne problemy. Choć formalnie chcę zdobyć swoje <span class="purple-glow-text">pierwsze komercyjne doświadczenie w branży IT</span>, w praktyce dostarczyłem już działające rozwiązania. 
+                </p>
+                <p class="about-paragraph" data-i18n="about_p2">
+                    W mojej obecnej pracy stworzyłem i z powodzeniem wdrożyłem aplikacje webowe oraz wtyczki optymalizujące procesy operacyjne i automatyzujące analizę danych z plików Excel, co realnie podniosło efektywność zespołu. Mam na koncie także projekty realizowane od A do Z samodzielnie – od analizy UX/UI, przez design, aż po czстый kod (jak nowoczesna wizytówka <a href="https://idde.studio/" target="_blank" rel="noopener noreferrer" class="about-inline-link">idde.studio</a>). Moje techniczne początki to także aplikacje desktopowe w Java Core, np. program typu notes (<a href="https://github.com/szymon-gabriel/notesS.G" target="_blank" rel="noopener noreferrer" class="about-inline-link">GitHub</a>).
+                </p>
+                <p class="about-paragraph" data-i18n="about_p3">
+                    Prywatnie nieustannie się doszkalam, jednak moim głównym celem jest wejście do profesjonalnej firmy technologicznej. Szukam miejsca, gdzie pod okiem doświadczonych deweloperów będę mógł wymieniać się wiedzą, stawiać czoła złożonym wyzwaniom i rozwijać się każdego dnia jako Full-stack Developer.
+                </p>
+
+                <div class="about-footer-info">
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="about_loc_label">Lokalizacja:</span>
+                        <span class="info-value" data-i18n="about_loc_val">Ostrowiec Świętokrzyski, Polska (oraz zdalnie)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="about_email_label">E-mail bezpośredni:</span>
+                        <a href="mailto:contact.szymon.gabriel@gmail.com" class="info-value email-link">contact.szymon.gabriel@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title"><span data-i18n="skills_title">Umiejętności & Technologie</span><span>.</span></h2>
+            
+            <div class="skills-grid">
+                
+                <div class="skills-card">
+                    <div class="card-glow-purple"></div>
+                    <h3 class="category-title">Frontend & UI Design</h3>
+                    <div class="skills-list">
+                        
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-compass-drafting skill-icon"></i> Web Design / UI
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-brands fa-html5 skill-icon"></i> HTML5 & CSS3
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-mobile-screen-button skill-icon"></i> Responsive Design (RWD)
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-brands fa-figma skill-icon"></i> Figma (Basics)
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="skills-card">
+                    <div class="card-glow-purple"></div>
+                    <h3 class="category-title">Programming & Logic</h3>
+                    <div class="skills-list">
+                        
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-brands fa-js skill-icon"></i> JavaScript (ES6+)
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-puzzle-piece skill-icon"></i> Browser Extensions API
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-brands fa-java skill-icon"></i> Java Core
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-brands fa-git-alt skill-icon"></i> Git & Version Control
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="skills-card">
+                    <div class="card-glow-purple"></div>
+                    <h3 class="category-title">Backend & Systems</h3>
+                    <div class="skills-list">
+                        
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-brands fa-php skill-icon"></i> PHP & Laravel
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-database skill-icon"></i> MySQL / SQL Databases
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-network-wired skill-icon"></i> Networking (IPv4, DNS)
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-file-excel skill-icon"></i> Excel & Data Processing
+                            </span>
+                            <div class="stat-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <h2 class="section-title"><span data-i18n="projects_title">Moje ostatnie projekty</span><span>.</span></h2>
+        </div>
+
+        <div class="carousel-wrapper">
+            
+            <button class="carousel-arrow arrow-left" id="prevBtn" aria-label="Poprzedni projekt">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <button class="carousel-arrow arrow-right" id="nextBtn" aria-label="Następny projekt">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <div class="projects-carousel" id="projectSlider">
+        
+                <div class="project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <span class="project-num">01</span>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript (ES6)</span>
+                                <span class="tag">Chrome Extensions API</span>
+                                <span class="tag">Manifest V3</span>
+                            </div>
+                        </div>
+                        <h3 class="project-name">Smart Queue Plugin</h3>
+                        <p class="project-desc" data-i18n="p1_desc">Autorski plugin do przeglądarki usprawniający zarządzanie kolejjką połączeń poprzez system powiadomień real-time.</p>
+                        <div class="project-actions">
+                            <a href="https://szymon-gabriel.github.io/smart-queue-plugin/" 
+                            class="btn-action btn-primary" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-i18n="btn_live">View Demo</a>
+                            
+                            <a href="https://github.com/szymon-gabriel/smart-queue-plugin" 
+                            class="btn-action btn-secondary" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-i18n="btn_code">Check Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <span class="project-num">02</span>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript (ES6)</span>
+                                <span class="tag">SheetJS (XLSX)</span>
+                                <span class="tag">LocalStorage API</span>
+                            </div>
+                        </div>
+                        <h3 class="project-name">Contract Status Manager</h3>
+                        <p class="project-desc" data-i18n="p2_desc">Dedykowane narzędzie webowe dla koordynatorów do monitorowania statusów procesowych w czasie rzeczywistym.</p>
+                        <div class="project-actions">
+                            <a href="https://szymon-gabriel.github.io/contract-status-manager/" 
+                            class="btn-action btn-primary" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-i18n="btn_live">View Demo</a>
+                            
+                            <a href="https://github.com/szymon-gabriel/contract-status-manager" 
+                            class="btn-action btn-secondary" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-i18n="btn_code">Check Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <span class="project-num">03</span>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript (ES6)</span>
+                                <span class="tag">SheetJS (XLSX)</span>
+                                <span class="tag">LocalStorage API</span>
+                            </div>
+                        </div>
+                        <h3 class="project-name">Call Status Manager</h3>
+                        <p class="project-desc" data-i18n="p3_desc">Aplikacja webowa automatyzująca analizę danych z plików Excel, znacząco podnosząca efektywność pracy operacyjnej.</p>
+                        <div class="project-actions">
+                            <a href="https://szymon-gabriel.github.io/call-status-manager/" 
+                            class="btn-action btn-primary" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            data-i18n="btn_live">View Demo</a>
+                            
+                            <a href="https://github.com/szymon-gabriel/call-status-manager" 
+                            class="btn-action btn-secondary" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            data-i18n="btn_code">Check Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <span class="project-num">04</span>
+                            <div class="project-tags">
+                                <span class="tag">HTML5 / CSS3</span>
+                                <span class="tag">JavaScript (ES6)</span>
+                                <span class="tag">UI/UX Design</span>
+                            </div>
+                        </div>
+                        <h3 class="project-name">idde.studio</h3>
+                        <p class="project-desc" data-i18n="p4_desc">Kompleksowe wdrożenie responsywnej strony internetowej typu "business card" od zera, połączone z optymalizacją wydajnościową.</p>
+                        <div class="project-actions">
+                            <a href="https://idde.studio" 
+                            class="btn-action btn-primary" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            data-i18n="btn_visit">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <span class="project-num">05</span>
+                            <div class="project-tags">
+                                <span class="tag">HTML5 / CSS3</span>
+                                <span class="tag">JavaScript (ES6)</span>
+                                <span class="tag">i18n Architecture</span>
+                            </div>
+                        </div>
+                        <h3 class="project-name">Developer Portfolio (You are here 👾)</h3>
+                        <p class="project-desc" data-i18n="p5_desc">Moje osobiste portfolio zaprojektowane od zera, wyposażone w płynne animacje, architekturę wielojęzyczności (i18n) oraz pełną responsywność.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/szymon-gabriel/portfolio" 
+                            class="btn-action btn-secondary" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            data-i18n="btn_code">Check Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-top">
+                            <span class="project-num">06</span>
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Swing / AWT</span>
+                                <span class="tag">OOP Principles</span>
+                            </div>
+                        </div>
+                        <h3 class="project-name">Desktop Notes Application</h3>
+                        <p class="project-desc" data-i18n="p6_desc">Mój pierwszy samodzielny projekt z 2023 roku – klasyczna aplikacja okienkowa do zarządzania notatkami, napisana w celu opanowania fundamentów programowania obiektowego.</p>
+                        <div class="project-actions">
+                            <a href="https://github.com/szymon-gabriel/notesS.G" 
+                            class="btn-action btn-secondary" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            data-i18n="btn_code">Check Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="unified-footer-section">
+        <div class="footer-grid-container">
+            
+            <div class="footer-left-col">
+                <form class="contact-form" action="https://formspree.io/f/mvzjakyr" method="POST" id="my-form">
+                    
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name" data-i18n="form_name">Imię i nazwisko / Firma</label>
+                        <div class="input-line"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email" data-i18n="form_email">Adres e-mail</label>
+                        <div class="input-line"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="subject" name="_subject" required placeholder=" ">
+                        <label for="subject" data-i18n="form_subject">Temat wiadomości</label>
+                        <div class="input-line"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message" data-i18n="form_msg">Twoja wiadomość...</label>
+                        <div class="input-line"></div>
+                    </div>
+
+                    <input type="hidden" name="_next" value="https://szymon-gabriel.github.io/"> 
+
+                    <button type="submit" class="btn-submit">
+                        <span data-i18n="form_btn">Wyślij wiadomość</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                    
+                    <div id="form-status" style="margin-top: 15px; font-size: 0.9rem; font-weight: 600;"></div>
+                </form>
+            </div>
+
+            <div class="footer-right-col">
+                
+                <div class="availability-badge">
+                    <span class="pulse-dot"></span>
+                    <span class="availability-text" data-i18n="footer_status">Dostępny do nowych projektów</span>
+                </div>
+
+                <div class="footer-bio-block">
+                    <h2 class="footer-grid-title"><span data-i18n="footer_connect">Porozmawiajmy</span><span>.</span></h2>
+                    <p class="footer-bio-text" data-i18n="footer_text">
+                        Jestem otwarty na propozycje pracy. Z chęcią podejmę się nowych wyzwań, by wciąż zwiększać swoje doświadczenie oraz wiedzę programistyczną i projektową.
+                    </p>
+                </div>
+
+                <div class="social-pills-row footer-pills-layout">
+                    <a href="https://github.com/szymon-gabriel" target="_blank" class="social-pill-link">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/szymon-gabriel-wojciechowski/" target="_blank" class="social-pill-link">
+                        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/szymon_gabriel_/" target="_blank" class="social-pill-link">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Szymon Wojciechowski. All rights reserved.</p>
+        </div>
+    </section>
+
+    <div id="progress-wrap" class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+        <div class="arrow-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
