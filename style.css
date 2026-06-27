@@ -162,6 +162,18 @@ body {
 /* ==========================================================================
    3. HERO SECTION
    ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#hero .container {
+    display: flex;
+    flex-direction: column;
+}
+
 .hero-section {
     min-height: 100vh;
     background-color: var(--bg-color);
