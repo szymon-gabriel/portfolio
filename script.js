@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (form && status) {
         form.addEventListener("submit", async (event) => {
-            event.preventDefault(); // Blokujemy domyślne przeładowanie strony
+            event.preventDefault();
             
             const data = new FormData(form);
             const currentLang = document.documentElement.lang || "pl";
@@ -254,8 +254,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (response.ok) {
                     status.innerHTML = msgSuccess;
-                    status.style.color = "#10b981"; // Zielony sukces
-                    form.reset(); // Czyszczenie pól formularza
+                    status.style.color = "#10b981";
+                    form.reset();
                 } else {
                     const responseData = await response.json();
                     if (Object.hasOwn(responseData, 'errors')) {
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     } else {
                         status.innerHTML = msgError;
                     }
-                    status.style.color = "#ef4444"; // Czerwony błąd
+                    status.style.color = "#ef4444";
                 }
             } catch (error) {
                 status.innerHTML = msgError;
